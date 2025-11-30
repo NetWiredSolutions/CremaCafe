@@ -81,13 +81,26 @@
                 <a href="#contact" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Hours & Contact</a>
             </nav>
 
-            <!-- Mobile menu button (placeholder) -->
-            <button class="md:hidden p-2 rounded-lg hover:bg-crema-medium/20 transition duration-300" aria-label="Open navigation">
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button"
+                    class="md:hidden p-2 rounded-lg hover:bg-crema-medium/20 transition duration-300"
+                    aria-label="Open navigation">
                 <svg class="w-6 h-6 text-crema-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </div>
+
+        <!-- Mobile navigation dropdown -->
+        <nav id="mobile-menu" class="md:hidden hidden border-t border-crema-medium/40 bg-crema-light/95">
+            <div class="px-4 py-3 space-y-2 flex flex-col">
+                <a href="#home" class="nav-link block text-base font-medium text-crema-dark py-1">Home</a>
+                <a href="#about" class="nav-link block text-base font-medium text-crema-dark py-1">Who We Are</a>
+                <a href="#reviews" class="nav-link block text-base font-medium text-crema-dark py-1">Reviews</a>
+                <a href="#menu" class="nav-link block text-base font-medium text-crema-dark py-1">Menu</a>
+                <a href="#contact" class="nav-link block text-base font-medium text-crema-dark py-1">Hours & Contact</a>
+            </div>
+        </nav>
     </header>
 
     <main>
@@ -513,7 +526,7 @@
         <p>&copy; 2025 Crema Cafe. All rights reserved. | Handcrafted in Dunedin, FL.</p>
     </footer>
 
-    <!-- JavaScript for smooth scrolling, fade-in, accordion, and header transparency -->
+    <!-- JavaScript for smooth scrolling, fade-in, accordion, header transparency, and mobile nav -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Smooth Scrolling
@@ -593,6 +606,23 @@
 
             toggleHeader(); // run once on load
             window.addEventListener('scroll', toggleHeader);
+
+            // Mobile nav toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                // Close mobile menu when a link is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
         });
     </script>
 
