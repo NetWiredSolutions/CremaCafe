@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -550,33 +549,62 @@
     <!-- Hours & Contact Section -->
     <section id="contact" class="py-24 md:py-36 bg-crema-light text-crema-dark border-t border-crema-medium/50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12 items-start">
-        <!-- Location -->
+
+        <!-- Location + Map + Buttons -->
         <div class="fade-in">
           <h4 class="text-xl font-semibold mb-4 text-crema-medium uppercase tracking-wider">
             Our Location
           </h4>
-          <address class="text-lg leading-relaxed not-italic text-crema-dark/90">
-            2058 Bayshore Blvd.<br />
-            Dunedin, FL 34698
-          </address>
-          <a
-            href="tel:7272390092"
-            class="mt-4 inline-block text-crema-medium hover:text-crema-dark transition duration-300 text-lg"
-          >
-            (727) 239-0092
-          </a>
 
-          <!-- Interactive Google Map -->
-          <div class="mt-6 rounded-xl overflow-hidden border border-crema-medium/40 shadow-md">
-            <iframe
-              src="https://www.google.com/maps?q=2058+Bayshore+Blvd,+Dunedin,+FL+34698&output=embed"
-              width="100%"
-              height="220"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div class="space-y-4">
+            <!-- Address + phone + map side by side on desktop -->
+            <div class="md:flex md:items-start md:space-x-4">
+              <div class="md:flex-1">
+                <address class="text-lg leading-relaxed not-italic text-crema-dark/90">
+                  2058 Bayshore Blvd.<br />
+                  Dunedin, FL 34698
+                </address>
+                <a
+                  href="tel:7272390092"
+                  class="mt-4 inline-block text-crema-medium hover:text-crema-dark transition duration-300 text-lg"
+                >
+                  (727) 239-0092
+                </a>
+              </div>
+
+              <!-- Interactive Google Map -->
+              <div class="mt-4 md:mt-0 md:w-64 lg:w-72 rounded-xl overflow-hidden border border-crema-medium/40 shadow-md">
+                <iframe
+                  src="https://www.google.com/maps?q=2058+Bayshore+Blvd,+Dunedin,+FL+34698&output=embed"
+                  width="100%"
+                  height="220"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Direction buttons -->
+            <div class="flex flex-wrap gap-3 pt-1">
+              <a
+                href="https://maps.google.com/?q=2058+Bayshore+Blvd,+Dunedin,+FL+34698"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2 rounded-full bg-white border border-crema-medium/60 text-sm font-semibold text-crema-dark shadow-sm hover:bg-crema-medium/10 hover:border-crema-medium transition"
+              >
+                Open in Google Maps
+              </a>
+              <a
+                href="https://maps.apple.com/?address=2058%20Bayshore%20Blvd,%20Dunedin,%20FL%2034698"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2 rounded-full bg-white border border-crema-medium/60 text-sm font-semibold text-crema-dark shadow-sm hover:bg-crema-medium/10 hover:border-crema-medium transition"
+              >
+                Open in Apple Maps
+              </a>
+            </div>
           </div>
         </div>
 
@@ -739,4 +767,3 @@
   </script>
 </body>
 </html>
-```
