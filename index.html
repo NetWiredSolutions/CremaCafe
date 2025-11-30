@@ -46,18 +46,29 @@
         .transition-max-height {
             transition: max-height 0.5s ease-in-out;
         }
+
+        /* Header background that fades more transparent on scroll */
+        .header-bar {
+            background-color: rgba(252, 245, 227, 0.95); /* crema-light */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .header-bar.header-transparent {
+            background-color: rgba(252, 245, 227, 0.40); /* more transparent */
+            box-shadow: none;
+        }
     </style>
 </head>
 <body class="bg-crema-light text-crema-dark font-sans antialiased">
 
     <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-crema-light/95 backdrop-blur-sm shadow-md transition duration-300">
+    <header class="header-bar sticky top-0 z-50 backdrop-blur-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
 
             <!-- Logo left -->
             <a href="#home" class="flex items-center space-x-3 hover:opacity-80 transition">
-                <!-- Make sure this file is in your repo root -->
-                <img src="d4330df0-a205-4417-ac1e-7b82d534af4c.png"
+                <!-- USES EXACT FILE NAME FROM GITHUB -->
+                <img src="5957860407237567926 (1).webp"
                      alt="Crema Cafe Logo"
                      class="h-14 w-auto object-contain">
             </a>
@@ -71,7 +82,7 @@
                 <a href="#contact" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Hours & Contact</a>
             </nav>
 
-            <!-- Mobile menu button (not wired yet) -->
+            <!-- Mobile menu button (placeholder) -->
             <button class="md:hidden p-2 rounded-lg hover:bg-crema-medium/20 transition duration-300" aria-label="Open navigation">
                 <svg class="w-6 h-6 text-crema-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -94,7 +105,7 @@
             <!-- Dark overlay so text stays readable -->
             <div class="absolute inset-0 bg-black/40"></div>
 
-            <!-- Hero Content (NO box, just text) -->
+            <!-- Hero Content (no box, just text) -->
             <div class="relative z-10 px-6 max-w-4xl mx-auto">
                 <h1 class="text-6xl sm:text-7xl lg:text-8xl font-serif font-light text-[#fcf5e3] tracking-tight leading-none drop-shadow-xl">
                     Crema Cafe
@@ -129,7 +140,7 @@
                         Our beans are carefully selected from single-origin farms and roasted in small, precise batches to bring out their unique and complex flavors. We believe in quality over quantity, and our baristas are dedicated to crafting the perfect pour-over, espresso, or cold brew every time.
                     </p>
                 </div>
-                <!-- Image (replace src with your own file in the repo) -->
+                <!-- Image (replace src with an image you upload, e.g. about-latte.jpg) -->
                 <div class="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition duration-700 ease-out">
                     <img src="about-latte.jpg"
                          alt="Barista preparing a latte with art."
@@ -426,7 +437,7 @@
         <p>&copy; 2025 Crema Cafe. All rights reserved. | Handcrafted in Dunedin, FL.</p>
     </footer>
 
-    <!-- JavaScript for smooth scrolling, fade-in, and accordion -->
+    <!-- JavaScript for smooth scrolling, fade-in, accordion, and header transparency -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Smooth Scrolling
@@ -493,6 +504,19 @@
                     drinksContent.style.maxHeight = drinksContent.scrollHeight + "px";
                 }, 100);
             }
+
+            // Header transparency on scroll
+            const header = document.querySelector('.header-bar');
+            const toggleHeader = () => {
+                if (window.scrollY > 80) {
+                    header.classList.add('header-transparent');
+                } else {
+                    header.classList.remove('header-transparent');
+                }
+            };
+
+            toggleHeader(); // run once on load
+            window.addEventListener('scroll', toggleHeader);
         });
     </script>
 
