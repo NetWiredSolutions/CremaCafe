@@ -67,11 +67,9 @@
 
             <!-- Logo left -->
             <a href="#home" class="flex items-center space-x-3 hover:opacity-80 transition">
-                <!-- USES EXACT FILE NAME FROM GITHUB -->
                 <img src="5957860407237567926 (1).webp"
-     alt="Crema Cafe Logo"
-     class="h-16 md:h-20 lg:h-24 w-auto object-contain">
-
+                     alt="Crema Cafe Logo"
+                     class="h-16 md:h-20 lg:h-24 w-auto object-contain">
             </a>
 
             <!-- Desktop Navigation -->
@@ -141,15 +139,12 @@
                         Our beans are carefully selected from single-origin farms and roasted in small, precise batches to bring out their unique and complex flavors. We believe in quality over quantity, and our baristas are dedicated to crafting the perfect pour-over, espresso, or cold brew every time.
                     </p>
                 </div>
-                <!-- Image (replace src with an image you upload, e.g. about-latte.jpg) -->
+
+                <!-- Image -->
                 <div class="flex justify-center items-center">
-    <img src="Espresso.float.png"
-         alt="Latte cup with art"
-         class="w-[450px] max-w-full drop-shadow-2xl">
-</div>
-
-</div>
-
+                    <img src="Espresso.float.png"
+                         alt="Latte cup with art"
+                         class="w-[450px] max-w-full drop-shadow-2xl">
                 </div>
             </div>
         </section>
@@ -222,56 +217,95 @@
                             </svg>
                         </button>
                         <div class="menu-content overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
-                            <p class="text-sm font-semibold uppercase text-crema-medium/70 pb-2">Prices (Small / Medium / Large)</p>
-                            <div class="space-y-4 pb-6 divide-y divide-crema-dark/10">
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Espresso</p>
-                                    <p class="text-xl font-medium text-crema-dark">2.25 / 3.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Latte</p>
-                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Americano</p>
-                                    <p class="text-xl font-medium text-crema-dark">3.75 / 4.25 / 4.75</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Cappuccino</p>
-                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Mocha</p>
-                                    <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Macchiato</p>
-                                    <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Flat White</p>
-                                    <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Cold Brew</p>
-                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Black Coffee</p>
-                                    <p class="text-xl font-medium text-crema-dark">2.75 / 3.25 / 3.75</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Hot Tea</p>
-                                    <p class="text-xl font-medium text-crema-dark">3.25 / 3.75 / 4.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Extra Shot</p>
-                                    <p class="text-xl font-medium text-crema-dark">1.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Milk Substitute (Oat, Soy, Almond)</p>
-                                    <p class="text-xl font-medium text-crema-dark">1.00</p>
-                                </div>
+                            <p class="text-sm font-semibold uppercase text-crema-medium/70 pb-2">
+                                Prices are listed for 16oz and 24oz where applicable.
+                            </p>
+
+                            <div class="overflow-x-auto pb-6">
+                                <table class="w-full text-left border-separate border-spacing-y-2">
+                                    <thead>
+                                        <tr class="text-sm text-crema-medium/90 uppercase tracking-wide">
+                                            <th class="py-2">Drink</th>
+                                            <th class="py-2 text-right">16 oz</th>
+                                            <th class="py-2 text-right">24 oz</th>
+                                            <th class="py-2 text-right">Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-crema-dark text-lg">
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Espresso</td>
+                                            <td class="py-2 text-right">2.25</td>
+                                            <td class="py-2 text-right">3.25</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80">Single / Double</td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Latte</td>
+                                            <td class="py-2 text-right">5.50</td>
+                                            <td class="py-2 text-right">6.25</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Americano</td>
+                                            <td class="py-2 text-right">4.25</td>
+                                            <td class="py-2 text-right">4.75</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Cappuccino</td>
+                                            <td class="py-2 text-right">5.50</td>
+                                            <td class="py-2 text-right">6.25</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Mocha</td>
+                                            <td class="py-2 text-right">6.00</td>
+                                            <td class="py-2 text-right">6.75</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Macchiato</td>
+                                            <td class="py-2 text-right">6.00</td>
+                                            <td class="py-2 text-right">6.75</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Flat White</td>
+                                            <td class="py-2 text-right">6.00</td>
+                                            <td class="py-2 text-right">6.75</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Cold Brew</td>
+                                            <td class="py-2 text-right">5.50</td>
+                                            <td class="py-2 text-right">6.25</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Black Coffee</td>
+                                            <td class="py-2 text-right">3.25</td>
+                                            <td class="py-2 text-right">3.75</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Hot Tea</td>
+                                            <td class="py-2 text-right">3.75</td>
+                                            <td class="py-2 text-right">4.25</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Extra Shot</td>
+                                            <td class="py-2 text-right">1.25</td>
+                                            <td class="py-2 text-right">—</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                        </tr>
+                                        <tr class="border-t border-crema-dark/10">
+                                            <td class="py-2">Milk Substitute</td>
+                                            <td class="py-2 text-right">1.00</td>
+                                            <td class="py-2 text-right">—</td>
+                                            <td class="py-2 text-right text-sm text-crema-medium/80">Oat, Soy, Almond</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -286,34 +320,69 @@
                         </button>
                         <div class="menu-content overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
                             <div class="space-y-4 pb-6 divide-y divide-crema-dark/10">
-                                <h4 class="text-lg font-semibold text-crema-medium pt-4">Specialty Drinks (Prices S / M / L)</h4>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Hot Cocoa</p>
-                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Chai</p>
-                                    <p class="text-xl font-medium text-crema-dark">5.75 / 6.50 / 7.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Matcha</p>
-                                    <p class="text-xl font-medium text-crema-dark">5.75 / 6.50 / 7.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Italian Soda</p>
-                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Refresher</p>
-                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                                </div>
-                                <div class="pt-4 flex justify-between items-start">
-                                    <p class="text-xl font-medium text-crema-dark">Frappuccino</p>
-                                    <p class="text-xl font-medium text-crema-dark">6.75</p>
-                                </div>
-                                <p class="text-sm italic text-crema-medium/70 pt-4">Ask to see more special drinks.</p>
 
-                                <h4 class="text-lg font-semibold text-crema-medium pt-4 border-t border-crema-dark/10">Flavors</h4>
+                                <h4 class="text-lg font-semibold text-crema-medium pt-4">
+                                    Specialty Drinks
+                                </h4>
+
+                                <div class="overflow-x-auto pb-4">
+                                    <table class="w-full text-left border-separate border-spacing-y-2">
+                                        <thead>
+                                            <tr class="text-sm text-crema-medium/90 uppercase tracking-wide">
+                                                <th class="py-2">Drink</th>
+                                                <th class="py-2 text-right">16 oz</th>
+                                                <th class="py-2 text-right">24 oz</th>
+                                                <th class="py-2 text-right">Notes</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-crema-dark text-lg">
+                                            <tr class="border-t border-crema-dark/10">
+                                                <td class="py-2">Hot Cocoa</td>
+                                                <td class="py-2 text-right">5.50</td>
+                                                <td class="py-2 text-right">6.25</td>
+                                                <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                            </tr>
+                                            <tr class="border-t border-crema-dark/10">
+                                                <td class="py-2">Chai</td>
+                                                <td class="py-2 text-right">6.50</td>
+                                                <td class="py-2 text-right">7.25</td>
+                                                <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                            </tr>
+                                            <tr class="border-t border-crema-dark/10">
+                                                <td class="py-2">Matcha</td>
+                                                <td class="py-2 text-right">6.50</td>
+                                                <td class="py-2 text-right">7.25</td>
+                                                <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                            </tr>
+                                            <tr class="border-t border-crema-dark/10">
+                                                <td class="py-2">Italian Soda</td>
+                                                <td class="py-2 text-right">5.50</td>
+                                                <td class="py-2 text-right">6.25</td>
+                                                <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                            </tr>
+                                            <tr class="border-t border-crema-dark/10">
+                                                <td class="py-2">Refresher</td>
+                                                <td class="py-2 text-right">5.50</td>
+                                                <td class="py-2 text-right">6.25</td>
+                                                <td class="py-2 text-right text-sm text-crema-medium/80"></td>
+                                            </tr>
+                                            <tr class="border-t border-crema-dark/10">
+                                                <td class="py-2">Frappuccino</td>
+                                                <td class="py-2 text-right">6.75</td>
+                                                <td class="py-2 text-right">—</td>
+                                                <td class="py-2 text-right text-sm text-crema-medium/80">Blended</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <p class="text-sm italic text-crema-medium/70 pt-2">
+                                    Ask to see more special drinks.
+                                </p>
+
+                                <h4 class="text-lg font-semibold text-crema-medium pt-4 border-t border-crema-dark/10">
+                                    Flavors
+                                </h4>
                                 <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-lg text-crema-dark">
                                     <p>Vanilla</p><p>Caramel</p>
                                     <p>Coconut</p><p>Peppermint</p>
@@ -321,7 +390,9 @@
                                     <p>Lavender</p><p>Toasted Marshmallow</p>
                                     <p>Amaretto</p><p>Pumpkin Spice</p>
                                 </div>
-                                <p class="text-sm italic text-crema-medium/70 pt-4">Ask to see the full list of flavors.</p>
+                                <p class="text-sm italic text-crema-medium/70 pt-4">
+                                    Ask to see the full list of flavors.
+                                </p>
                             </div>
                         </div>
                     </div>
