@@ -76,12 +76,13 @@
 </head>
 <body class="bg-crema-light text-crema-dark font-sans antialiased">
 
-    <!-- Navigation Header -->
+        <!-- Navigation Header -->
     <header class="header-bar sticky top-0 z-50 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-6 relative">
 
-            <!-- Logo -->
-            <a href="#home" class="flex items-center gap-3 hover:opacity-80 transition">
+            <!-- Logo (centered on mobile, left on desktop) -->
+            <a href="#home"
+               class="flex items-center gap-3 hover:opacity-80 transition absolute left-1/2 -translate-x-1/2 transform md:static md:translate-x-0">
                 <img src="5957860407237567926 (1).webp"
                      alt="Crema Cafe Logo"
                      class="h-14 md:h-16 lg:h-18 w-auto object-contain">
@@ -104,7 +105,7 @@
                 </a>
             </div>
 
-            <!-- Mobile menu button -->
+            <!-- Mobile menu button (stays on the right) -->
             <button id="mobileMenuButton"
                     class="md:hidden p-2 rounded-lg hover:bg-crema-medium/20 transition duration-300"
                     aria-label="Open navigation">
@@ -131,6 +132,7 @@
             </div>
         </div>
     </header>
+
 
     <main>
 
