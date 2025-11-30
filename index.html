@@ -63,23 +63,32 @@
 
     <!-- Navigation Header -->
     <header class="header-bar sticky top-0 z-50 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between md:justify-start gap-8">
 
             <!-- Logo left -->
             <a href="#home" class="flex items-center space-x-3 hover:opacity-80 transition">
-                <!-- USES EXACT FILE NAME FROM GITHUB -->
                 <img src="5957860407237567926 (1).webp"
                      alt="Crema Cafe Logo"
                      class="h-16 md:h-20 lg:h-24 w-auto object-contain">
             </a>
 
             <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Home</a>
-                <a href="#about" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Who We Are</a>
-                <a href="#reviews" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Reviews</a>
-                <a href="#menu" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Menu</a>
-                <a href="#contact" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Hours & Contact</a>
+            <nav class="hidden md:flex ml-4 lg:ml-8 space-x-8 lg:space-x-10 text-[0.72rem] sm:text-xs lg:text-sm font-semibold tracking-[0.22em] uppercase">
+                <a href="#home" class="nav-link transition duration-300 hover:scale-105">
+                    Home
+                </a>
+                <a href="#about" class="nav-link transition duration-300 hover:scale-105">
+                    Who We Are
+                </a>
+                <a href="#reviews" class="nav-link transition duration-300 hover:scale-105">
+                    Reviews
+                </a>
+                <a href="#menu" class="nav-link transition duration-300 hover:scale-105">
+                    Menu
+                </a>
+                <a href="#contact" class="nav-link transition duration-300 hover:scale-105">
+                    Hours & Contact
+                </a>
             </nav>
 
             <!-- Mobile menu button -->
@@ -96,11 +105,21 @@
         <div id="mobile-menu"
              class="md:hidden bg-crema-light border-t border-crema-medium/40 overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-out">
             <nav class="px-4 pb-4 space-y-3">
-                <a href="#home" class="block nav-link text-base font-medium text-crema-dark">Home</a>
-                <a href="#about" class="block nav-link text-base font-medium text-crema-dark">Who We Are</a>
-                <a href="#reviews" class="block nav-link text-base font-medium text-crema-dark">Reviews</a>
-                <a href="#menu" class="block nav-link text-base font-medium text-crema-dark">Menu</a>
-                <a href="#contact" class="block nav-link text-base font-medium text-crema-dark">Hours & Contact</a>
+                <a href="#home" class="block nav-link text-sm font-semibold tracking-[0.18em] uppercase text-crema-dark">
+                    Home
+                </a>
+                <a href="#about" class="block nav-link text-sm font-semibold tracking-[0.18em] uppercase text-crema-dark">
+                    Who We Are
+                </a>
+                <a href="#reviews" class="block nav-link text-sm font-semibold tracking-[0.18em] uppercase text-crema-dark">
+                    Reviews
+                </a>
+                <a href="#menu" class="block nav-link text-sm font-semibold tracking-[0.18em] uppercase text-crema-dark">
+                    Menu
+                </a>
+                <a href="#contact" class="block nav-link text-sm font-semibold tracking-[0.18em] uppercase text-crema-dark">
+                    Hours & Contact
+                </a>
             </nav>
         </div>
     </header>
@@ -180,7 +199,7 @@
                        target="_blank"
                        rel="noopener noreferrer"
                        class="group bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-2xl hover:-translate-y-1 hover:border-crema-medium/80 fade-in relative">
-                        <!-- Google "badge" top right -->
+                        <!-- Google badge -->
                         <div class="absolute top-4 right-4 flex items-center space-x-1 text-xs font-semibold text-[#4285F4]">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-4 h-4">
                                 <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C34.4 31.9 29.7 36 24 36 16.8 36 11 30.2 11 23S16.8 10 24 10c3.3 0 6.3 1.2 8.6 3.3l5.7-5.7C34.7 4.1 29.6 2 24 2 12.3 2 3 11.3 3 23s9.3 21 21 21 21-9.3 21-21c0-1.3-.1-2.5-.4-3.5z"></path>
@@ -304,7 +323,7 @@
                                 Prices (16 oz / 24 oz)
                             </p>
                             <div class="pb-6">
-                                <!-- Table layout for clarity -->
+                                <!-- Table layout -->
                                 <div class="grid grid-cols-3 gap-2 text-sm font-semibold text-crema-dark border-b border-crema-dark/10 pb-2 mb-2">
                                     <span>Drink</span>
                                     <span class="text-center">16 oz</span>
@@ -486,7 +505,6 @@
 
                     <!-- Order Online Button -->
                     <div class="mt-8 text-center pt-8 border-t border-crema-medium/50 fade-in delay-300">
-                        <!-- Replace [TOAST_LINK_HERE] with real Toast order link -->
                         <a href="[TOAST_LINK_HERE]"
                            class="inline-block px-10 py-5 bg-crema-dark text-crema-light font-bold text-xl rounded-full shadow-2xl tracking-wider uppercase hover:bg-crema-medium hover:shadow-crema-medium/50 transition duration-500 ease-in-out transform hover:scale-105 border-2 border-crema-dark"
                            target="_blank" rel="noopener noreferrer">
@@ -579,7 +597,7 @@
                                 <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
                             </svg>
                         </a>
-                        <!-- Facebook (placeholder) -->
+                        <!-- Facebook -->
                         <a href="#"
                            class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark"
                            aria-label="Facebook">
@@ -600,7 +618,7 @@
         <p>&copy; 2025 Crema Cafe. All rights reserved. | Handcrafted in Dunedin, FL.</p>
     </footer>
 
-    <!-- JavaScript for smooth scrolling, fade-in, accordion, header transparency, and mobile menu -->
+    <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Smooth Scrolling
@@ -680,13 +698,12 @@
             toggleHeader();
             window.addEventListener('scroll', toggleHeader);
 
-            // Mobile menu toggle – uses max-h / opacity
+            // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             let mobileOpen = false;
 
             if (mobileMenu && mobileMenuButton) {
-                // Force menu closed on load
                 mobileMenu.classList.add('max-h-0', 'opacity-0');
                 mobileMenu.classList.remove('max-h-96', 'opacity-100');
 
@@ -701,7 +718,7 @@
                     }
                 });
 
-                // Close mobile menu when clicking a link
+                // Close on link click
                 mobileMenu.querySelectorAll('a[href^="#"]').forEach(link => {
                     link.addEventListener('click', () => {
                         mobileOpen = false;
