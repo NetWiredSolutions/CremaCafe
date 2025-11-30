@@ -402,3 +402,99 @@
                         <!-- Instagram -->
                         <a href="#" class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark" aria-label="Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#" class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-crema-light/95 text-center text-crema-dark text-sm border-t border-crema-medium/50">
+        <p>&copy; 2025 Crema Cafe. All rights reserved. | Handcrafted in Dunedin, FL.</p>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling, fade-in, and accordion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    const targetEl = document.querySelector(targetId);
+                    if (!targetEl) return;
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Fade-in on scroll
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0,
+                rootMargin: "0px 0px -100px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
+            });
+
+            // Accordion / Dropdown Menu
+            const menuToggles = document.querySelectorAll('.menu-toggle');
+            const drinksContent = document.querySelector('.menu-dropdown:nth-child(1) .menu-content');
+
+            function toggleAccordion(button) {
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector('.arrow-icon');
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    arrow.classList.remove('rotate-180');
+                } else {
+                    document.querySelectorAll('.menu-content').forEach(other => {
+                        if (other !== content && other.style.maxHeight) {
+                            other.style.maxHeight = null;
+                            const otherArrow = other.previousElementSibling.querySelector('.arrow-icon');
+                            if (otherArrow) otherArrow.classList.remove('rotate-180');
+                        }
+                    });
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    arrow.classList.add('rotate-180');
+                }
+            }
+
+            menuToggles.forEach(button => {
+                button.addEventListener('click', () => toggleAccordion(button));
+            });
+
+            // Open Drinks by default
+            if (drinksContent) {
+                setTimeout(() => {
+                    drinksContent.style.maxHeight = drinksContent.scrollHeight + "px";
+                }, 100);
+            }
+        });
+    </script>
+
+</body>
+</html>
