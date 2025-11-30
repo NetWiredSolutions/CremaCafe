@@ -53,12 +53,13 @@
     <!-- Navigation Header -->
     <header class="sticky top-0 z-50 bg-crema-light/95 backdrop-blur-sm shadow-md transition duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Logo/Brand -->
-            <a href="#home" class="transition duration-300 hover:scale-105">
-                <!-- Replace src with your actual logo file in the repo -->
-                <img src="uploaded:image_2de74e.png-b2254b60-67b5-4e4e-ab06-8674ad37b503"
-                     alt="Crema Cafe Logo - Dunedin, FL"
-                     class="h-12 w-auto">
+
+            <!-- Logo left -->
+            <a href="#home" class="flex items-center space-x-3 hover:opacity-80 transition">
+                <!-- Make sure this file is in your repo root -->
+                <img src="d4330df0-a205-4417-ac1e-7b82d534af4c.png"
+                     alt="Crema Cafe Logo"
+                     class="h-14 w-auto object-contain">
             </a>
 
             <!-- Desktop Navigation -->
@@ -70,7 +71,7 @@
                 <a href="#contact" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Hours & Contact</a>
             </nav>
 
-            <!-- Mobile Menu Button (not wired yet) -->
+            <!-- Mobile menu button (not wired yet) -->
             <button class="md:hidden p-2 rounded-lg hover:bg-crema-medium/20 transition duration-300" aria-label="Open navigation">
                 <svg class="w-6 h-6 text-crema-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -83,24 +84,27 @@
 
         <!-- Hero Section with Video Background -->
         <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden fade-in">
+
             <!-- Video Background -->
             <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
                 <source src="espresso.pour.video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
-            <!-- Dark overlay for contrast -->
-            <div class="absolute inset-0 bg-crema-dark opacity-60"></div>
+            <!-- Dark overlay so text stays readable -->
+            <div class="absolute inset-0 bg-black/40"></div>
 
-            <!-- Hero Content -->
-            <div class="relative z-10 p-6 max-w-4xl mx-auto bg-crema-light/90 rounded-2xl shadow-2xl backdrop-blur-sm border border-crema-medium/50">
-                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-serif font-light text-crema-dark tracking-tight leading-none mb-4">
+            <!-- Hero Content (NO box, just text) -->
+            <div class="relative z-10 px-6 max-w-4xl mx-auto">
+                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-serif font-light text-[#fcf5e3] tracking-tight leading-none drop-shadow-xl">
                     Crema Cafe
                 </h1>
-                <p class="text-xl sm:text-2xl text-crema-dark/80 italic font-light max-w-2xl mx-auto mt-4">
+                <p class="text-xl sm:text-2xl text-[#fcf5e3]/90 italic font-light max-w-2xl mx-auto mt-6 drop-shadow-lg">
                     Treat yourself to the perfect coffee experience in a cozy atmosphere.
                 </p>
-                <a href="#menu" class="mt-8 inline-block px-8 py-4 bg-crema-dark text-crema-light font-semibold text-lg rounded-full shadow-lg hover:bg-crema-medium hover:text-white transition duration-500 ease-in-out transform hover:scale-105">
+
+                <a href="#menu"
+                   class="mt-10 inline-block px-8 py-4 bg-crema-dark text-crema-light font-semibold text-lg rounded-full shadow-xl hover:bg-crema-medium hover:text-white transition duration-500 ease-in-out transform hover:scale-105">
                     Explore Our Menu
                 </a>
             </div>
@@ -125,10 +129,9 @@
                         Our beans are carefully selected from single-origin farms and roasted in small, precise batches to bring out their unique and complex flavors. We believe in quality over quantity, and our baristas are dedicated to crafting the perfect pour-over, espresso, or cold brew every time.
                     </p>
                 </div>
-                <!-- Image -->
+                <!-- Image (replace src with your own file in the repo) -->
                 <div class="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition duration-700 ease-out">
-                    <!-- Replace src with your actual image file -->
-                    <img src="uploaded:espresso-art-crafting-stockcake.jpg-c77b8060-15b6-4487-bd51-471d0176b8c9"
+                    <img src="about-latte.jpg"
                          alt="Barista preparing a latte with art."
                          class="w-full h-full object-cover">
                 </div>
@@ -142,6 +145,7 @@
                 <p class="text-center text-5xl font-serif font-semibold mb-12 leading-tight text-crema-dark fade-in">Rave Reviews</p>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
                     <!-- Review 1 -->
                     <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in">
                         <div class="text-2xl text-crema-medium mb-3">★★★★★</div>
@@ -366,6 +370,7 @@
         <!-- Hours & Contact Section -->
         <section id="contact" class="py-24 md:py-36 bg-crema-light text-crema-dark border-t border-crema-medium/50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12 items-start">
+
                 <!-- Location -->
                 <div class="fade-in">
                     <h4 class="text-xl font-semibold mb-4 text-crema-medium uppercase tracking-wider">Our Location</h4>
@@ -397,98 +402,3 @@
                         <!-- Instagram -->
                         <a href="#" class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark" aria-label="Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                                <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
-                            </svg>
-                        </a>
-                        <!-- Facebook -->
-                        <a href="#" class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark" aria-label="Facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-8 bg-crema-light/95 text-center text-crema-dark text-sm border-t border-crema-medium/50">
-        <p>&copy; 2025 Crema Cafe. All rights reserved. | Handcrafted in Dunedin, FL.</p>
-    </footer>
-
-    <!-- JavaScript for smooth scrolling, fade-in, and accordion -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Smooth Scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const targetId = this.getAttribute('href');
-                    const targetEl = document.querySelector(targetId);
-                    if (!targetEl) return;
-                    e.preventDefault();
-                    targetEl.scrollIntoView({ behavior: 'smooth' });
-                });
-            });
-
-            // Fade-in on scroll
-            const faders = document.querySelectorAll('.fade-in');
-            const appearOptions = {
-                threshold: 0,
-                rootMargin: "0px 0px -100px 0px"
-            };
-
-            const appearOnScroll = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add('appear');
-                    observer.unobserve(entry.target);
-                });
-            }, appearOptions);
-
-            faders.forEach(fader => {
-                appearOnScroll.observe(fader);
-            });
-
-            // Accordion / Dropdown Menu
-            const menuToggles = document.querySelectorAll('.menu-toggle');
-            const drinksContent = document.querySelector('.menu-dropdown:nth-child(1) .menu-content');
-
-            function toggleAccordion(button) {
-                const content = button.nextElementSibling;
-                const arrow = button.querySelector('.arrow-icon');
-
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                    arrow.classList.remove('rotate-180');
-                } else {
-                    document.querySelectorAll('.menu-content').forEach(other => {
-                        if (other !== content && other.style.maxHeight) {
-                            other.style.maxHeight = null;
-                            const otherArrow = other.previousElementSibling.querySelector('.arrow-icon');
-                            if (otherArrow) otherArrow.classList.remove('rotate-180');
-                        }
-                    });
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    arrow.classList.add('rotate-180');
-                }
-            }
-
-            menuToggles.forEach(button => {
-                button.addEventListener('click', () => toggleAccordion(button));
-            });
-
-            // Open Drinks by default
-            if (drinksContent) {
-                setTimeout(() => {
-                    drinksContent.style.maxHeight = drinksContent.scrollHeight + "px";
-                }, 100);
-            }
-        });
-    </script>
-
-</body>
-</html>
