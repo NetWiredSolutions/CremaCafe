@@ -57,6 +57,18 @@
             background-color: rgba(252, 245, 227, 0.40); /* more transparent */
             box-shadow: none;
         }
+
+        /* Mobile menu smooth slide / fade */
+        .mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.25s ease;
+        }
+        .mobile-menu.open {
+            max-height: 260px; /* enough height for links */
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-crema-light text-crema-dark font-sans antialiased">
@@ -92,7 +104,8 @@
         </div>
 
         <!-- Mobile navigation dropdown -->
-        <nav id="mobile-menu" class="md:hidden hidden border-t border-crema-medium/40 bg-crema-light/95">
+        <nav id="mobile-menu"
+             class="mobile-menu md:hidden border-t border-crema-medium/40 bg-crema-light/95">
             <div class="px-4 py-3 space-y-2 flex flex-col">
                 <a href="#home" class="nav-link block text-base font-medium text-crema-dark py-1">Home</a>
                 <a href="#about" class="nav-link block text-base font-medium text-crema-dark py-1">Who We Are</a>
@@ -500,12 +513,14 @@
                     <p class="mb-4 text-lg text-crema-dark/90">Follow our journey and daily specials on social media!</p>
                     <div class="flex space-x-6">
                         <!-- Instagram -->
-                       <!-- Instagram -->
-<a href="https://www.instagram.com/crema_cafe_dunedin/"
-   class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark"
-   aria-label="Instagram"
-   target="_blank" rel="noopener noreferrer">
-
+                        <a href="https://www.instagram.com/crema_cafe_dunedin/"
+                           class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark"
+                           aria-label="Instagram"
+                           target="_blank" rel="noopener noreferrer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
                             </svg>
                         </a>
                         <!-- Facebook -->
@@ -608,19 +623,19 @@
             toggleHeader(); // run once on load
             window.addEventListener('scroll', toggleHeader);
 
-            // Mobile nav toggle
+            // Mobile nav toggle with smooth transition
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('open');
                 });
 
                 // Close mobile menu when a link is clicked
                 mobileMenu.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
-                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('open');
                     });
                 });
             }
