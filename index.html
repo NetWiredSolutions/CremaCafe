@@ -298,7 +298,7 @@
                     <div class="menu-dropdown border-b border-crema-medium/50 pb-4 fade-in">
                         <button class="menu-toggle w-full flex justify-between items-center py-4 text-3xl font-serif font-medium text-crema-dark hover:text-crema-medium transition duration-300">
                             <span>Drinks</span>
-                            <svg class="arrow-icon w-6 h-6 transform transition-transform duration-300 rotate-180"
+                            <svg class="arrow-icon w-6 h-6 transform transition-transform duration-300"
                                  fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -655,47 +655,38 @@
             });
 
             // Accordion / Dropdown Menu
-const menuToggles = document.querySelectorAll('.menu-toggle');
-const drinksContent = document.querySelector('.menu-dropdown:nth-child(1) .menu-content');
+            const menuToggles = document.querySelectorAll('.menu-toggle');
 
-function toggleAccordion(button) {
-    const content = button.nextElementSibling;
-    const arrow = button.querySelector('.arrow-icon');
+            function toggleAccordion(button) {
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector('.arrow-icon');
 
-    // If content is open → close it
-    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-        content.style.maxHeight = null;
-        arrow.classList.remove('rotate-180');
-    } 
-    // If content is closed → close others & open it
-    else {
-        document.querySelectorAll('.menu-content').forEach(other => {
-            if (other !== content && other.style.maxHeight && other.style.maxHeight !== '0px') {
-                other.style.maxHeight = null;
-                const otherArrow = other.previousElementSibling.querySelector('.arrow-icon');
-                if (otherArrow) otherArrow.classList.remove('rotate-180');
+                // If content is open → close it
+                if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                    content.style.maxHeight = null;
+                    arrow.classList.remove('rotate-180');
+                } 
+                // If content is closed → close others & open it
+                else {
+                    document.querySelectorAll('.menu-content').forEach(other => {
+                        if (other !== content && other.style.maxHeight && other.style.maxHeight !== '0px') {
+                            other.style.maxHeight = null;
+                            const otherArrow = other.previousElementSibling.querySelector('.arrow-icon');
+                            if (otherArrow) otherArrow.classList.remove('rotate-180');
+                        }
+                    });
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    arrow.classList.add('rotate-180');
+                }
             }
-        });
-        content.style.maxHeight = content.scrollHeight + "px";
-        arrow.classList.add('rotate-180');
-    }
-}
 
-// Add click behavior
-menuToggles.forEach(button => {
-    button.addEventListener('click', () => toggleAccordion(button));
-});
+            // Add click behavior
+            menuToggles.forEach(button => {
+                button.addEventListener('click', () => toggleAccordion(button));
+            });
 
-// IMPORTANT: DO NOT AUTO-OPEN ANY DROPDOWN
-// (We removed the "open by default" code)
-
-
-            // Open Drinks by default
-            if (drinksContent) {
-                setTimeout(() => {
-                    drinksContent.style.maxHeight = drinksContent.scrollHeight + "px";
-                }, 100);
-            }
+            // IMPORTANT: DO NOT AUTO-OPEN ANY DROPDOWN
+            // (No "open by default" code here)
 
             // Header transparency on scroll
             const header = document.querySelector('.header-bar');
