@@ -7,14 +7,15 @@
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Load Playfair Display (Fancy Header) and Inter (Body) Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900;1,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <style>
         /* Custom Tailwind Configuration (using shades of brown/cream/amber for nude/warm vibes) */
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'crema-light': '#fefcf3', /* Very light cream/nude background */
+                        /* UPDATED: Changed from #f7f3e8 to #fcf5e3 (richer, nude cream tone) */
+                        'crema-light': '#fcf5e3', /* Nude Cream Beige Background */
                         'crema-dark': '#4a2517',  /* Deep rich brown text/accent */
                         'crema-medium': '#b59374', /* Soft medium brown accent */
                     },
@@ -78,8 +79,8 @@
         
         <!-- Video Background Element -->
         <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-            <!-- IMPORTANT: Replace this placeholder source with the actual URL to your cafe video file! -->
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-coffee-with-steaming-foam-and-a-croissant-4416-large.mp4" type="video/mp4">
+            <!-- Source path uses the user-provided file name -->
+            <source src="tmpf1cmwwxx.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         
@@ -100,7 +101,7 @@
         </div>
     </section>
 
-    <!-- About Section: Who We Are -->
+    <!-- About Section: Who We Are (Alternating BG: creama-dark/5) -->
     <section id="about" class="py-24 md:py-36 bg-crema-dark/5">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center fade-in">
             <!-- Text Content -->
@@ -128,7 +129,7 @@
         </div>
     </section>
     
-    <!-- New Section: Customer Reviews -->
+    <!-- New Section: Customer Reviews (Uses the new crema-light BG) -->
     <section id="reviews" class="py-24 bg-crema-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-center text-sm font-semibold uppercase text-crema-medium tracking-widest mb-4 fade-in">Community Love</h2>
@@ -187,13 +188,13 @@
         </div>
     </section>
 
-    <!-- Full Menu Section - Now using interactive dropdowns and Order button -->
+    <!-- Full Menu Section (Alternating BG: creama-dark/5) -->
     <section id="menu" class="py-24 bg-crema-dark/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-center text-sm font-semibold uppercase text-crema-medium tracking-widest mb-4 fade-in">Explore What We Offer</h2>
             <p class="text-center text-5xl font-serif font-semibold mb-12 leading-tight text-crema-dark fade-in">Our Full Menu</p>
 
-            <!-- Menu Container -->
+            <!-- Menu Container (Stays white for contrast) -->
             <div class="bg-white rounded-2xl shadow-2xl p-4 sm:p-8 border border-crema-medium/30">
                 
                 <!-- 1. Drinks Dropdown -->
@@ -369,7 +370,7 @@
         </div>
     </section>
 
-    <!-- Hours & Contact Section -->
+    <!-- Hours & Contact Section (Uses the new crema-light BG) -->
     <section id="contact" class="py-24 md:py-36 bg-crema-light text-crema-dark border-t border-crema-medium/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12 items-start">
             
@@ -418,7 +419,7 @@
 
 </main>
 
-<!-- Footer -->
+<!-- Footer (Uses the new crema-light BG) -->
 <footer class="py-8 bg-crema-light/95 text-center text-crema-dark text-sm border-t border-crema-medium/50">
     <p>&copy; 2025 Crema Cafe. All rights reserved. | Handcrafted in Dunedin, FL.</p>
 </footer>
