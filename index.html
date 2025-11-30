@@ -697,9 +697,14 @@
         window.addEventListener('scroll', toggleHeader);
 
         // Mobile menu toggle – uses max-h to avoid giant header when closed
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        let mobileOpen = false;
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// FORCE MENU CLOSED ON LOAD
+mobileMenu.classList.add('max-h-0', 'opacity-0');
+mobileMenu.classList.remove('max-h-96', 'opacity-100');
+
+let mobileOpen = false;
 
         mobileMenuButton.addEventListener('click', () => {
             mobileOpen = !mobileOpen;
