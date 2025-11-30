@@ -655,32 +655,40 @@
             });
 
             // Accordion / Dropdown Menu
-            const menuToggles = document.querySelectorAll('.menu-toggle');
-            const drinksContent = document.querySelector('.menu-dropdown:nth-child(1) .menu-content');
+const menuToggles = document.querySelectorAll('.menu-toggle');
+const drinksContent = document.querySelector('.menu-dropdown:nth-child(1) .menu-content');
 
-            function toggleAccordion(button) {
-                const content = button.nextElementSibling;
-                const arrow = button.querySelector('.arrow-icon');
+function toggleAccordion(button) {
+    const content = button.nextElementSibling;
+    const arrow = button.querySelector('.arrow-icon');
 
-                if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                    content.style.maxHeight = null;
-                    arrow.classList.remove('rotate-180');
-                } else {
-                    document.querySelectorAll('.menu-content').forEach(other => {
-                        if (other !== content && other.style.maxHeight && other.style.maxHeight !== '0px') {
-                            other.style.maxHeight = null;
-                            const otherArrow = other.previousElementSibling.querySelector('.arrow-icon');
-                            if (otherArrow) otherArrow.classList.remove('rotate-180');
-                        }
-                    });
-                    content.style.maxHeight = content.scrollHeight + "px";
-                    arrow.classList.add('rotate-180');
-                }
+    // If content is open → close it
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = null;
+        arrow.classList.remove('rotate-180');
+    } 
+    // If content is closed → close others & open it
+    else {
+        document.querySelectorAll('.menu-content').forEach(other => {
+            if (other !== content && other.style.maxHeight && other.style.maxHeight !== '0px') {
+                other.style.maxHeight = null;
+                const otherArrow = other.previousElementSibling.querySelector('.arrow-icon');
+                if (otherArrow) otherArrow.classList.remove('rotate-180');
             }
+        });
+        content.style.maxHeight = content.scrollHeight + "px";
+        arrow.classList.add('rotate-180');
+    }
+}
 
-            menuToggles.forEach(button => {
-                button.addEventListener('click', () => toggleAccordion(button));
-            });
+// Add click behavior
+menuToggles.forEach(button => {
+    button.addEventListener('click', () => toggleAccordion(button));
+});
+
+// IMPORTANT: DO NOT AUTO-OPEN ANY DROPDOWN
+// (We removed the "open by default" code)
+
 
             // Open Drinks by default
             if (drinksContent) {
