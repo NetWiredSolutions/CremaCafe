@@ -4,29 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crema Cafe - Dunedin, FL</title>
-    <!-- Load Tailwind CSS -->
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Playfair Display (Fancy Header) and Inter (Body) Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900;1,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <style>
-        /* Custom Tailwind Configuration (using shades of brown/cream/amber for nude/warm vibes) */
+
+    <!-- Tailwind config (nude cream + coffee tones) -->
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        /* UPDATED: Changed from #f7f3e8 to #fcf5e3 (richer, nude cream tone) */
-                        'crema-light': '#fcf5e3', /* Nude Cream Beige Background */
-                        'crema-dark': '#4a2517',  /* Deep rich brown text/accent */
-                        'crema-medium': '#b59374', /* Soft medium brown accent */
+                        'crema-light': '#fcf5e3',   // Nude cream background
+                        'crema-dark': '#4a2517',    // Deep brown
+                        'crema-medium': '#b59374',  // Medium brown accent
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'], /* For fancy headings */
+                        serif: ['Playfair Display', 'serif'],
                     },
                 }
             }
         }
-        /* Custom CSS for smooth transitions and modern feel */
+    </script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900;1,400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style>
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
@@ -37,9 +41,8 @@
             transform: translateY(0);
         }
         .nav-link:hover {
-            color: '#b59374'; /* crema-medium on hover */
+            color: #b59374; /* crema-medium on hover */
         }
-        /* Custom CSS for smooth accordion transition on max-height */
         .transition-max-height {
             transition: max-height 0.5s ease-in-out;
         }
@@ -52,8 +55,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <!-- Logo/Brand -->
             <a href="#home" class="transition duration-300 hover:scale-105">
-                <img src="uploaded:image_2de74e.png-b2254b60-67b5-4e4e-ab06-8674ad37b503" 
-                     alt="Crema Cafe Logo - Dunedin, FL" 
+                <!-- Replace src with your actual logo file in the repo -->
+                <img src="uploaded:image_2de74e.png-b2254b60-67b5-4e4e-ab06-8674ad37b503"
+                     alt="Crema Cafe Logo - Dunedin, FL"
                      class="h-12 w-auto">
             </a>
 
@@ -66,447 +70,425 @@
                 <a href="#contact" class="nav-link text-lg font-medium text-crema-dark transition duration-300 hover:scale-105">Hours & Contact</a>
             </nav>
 
-            <!-- Mobile Menu Button (Placeholder) -->
-            <button class="md:hidden p-2 rounded-lg hover:bg-crema-medium/20 transition duration-300">
-                <!-- Hamburger Icon -->
-                <svg class="w-6 h-6 text-crema-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <!-- Mobile Menu Button (not wired yet) -->
+            <button class="md:hidden p-2 rounded-lg hover:bg-crema-medium/20 transition duration-300" aria-label="Open navigation">
+                <svg class="w-6 h-6 text-crema-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
             </button>
         </div>
     </header>
 
-    <!-- Hero Section with Video Background -->
-    <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden fade-in">
-        
-        <!-- Video Background Element -->
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
-            <!-- Source path uses the user-provided file name -->
-            <source src="tmpf1cmwwxx.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-        <!-- Dark Overlay for Contrast (Ensures text is highly readable) -->
-        <div class="absolute inset-0 bg-crema-dark opacity-60"></div>
+    <main>
 
-        <!-- Hero Content (Text & Button) -->
-        <div class="relative z-10 p-6 max-w-4xl mx-auto bg-crema-light/90 rounded-2xl shadow-2xl backdrop-blur-sm border border-crema-medium/50">
-            <h1 class="text-6xl sm:text-7xl lg:text-8xl font-serif font-light text-crema-dark tracking-tight leading-none mb-4">
-                Crema Cafe
-            </h1>
-            <p class="text-xl sm:text-2xl text-crema-dark/80 italic font-light max-w-2xl mx-auto mt-4">
-                Treat yourself to the perfect coffee experience in a cozy atmosphere.
-            </p>
-            <a href="#menu" class="mt-8 inline-block px-8 py-4 bg-crema-dark text-crema-light font-semibold text-lg rounded-full shadow-lg hover:bg-crema-medium hover:text-white transition duration-500 ease-in-out transform hover:scale-105">
-                Explore Our Menu
-            </a>
-        </div>
-    </section>
+        <!-- Hero Section with Video Background -->
+        <section id="home" class="relative h-screen flex items-center justify-center text-center overflow-hidden fade-in">
+            <!-- Video Background -->
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="espresso.pour.video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
-    <!-- About Section: Who We Are (Alternating BG: creama-dark/5) -->
-    <section id="about" class="py-24 md:py-36 bg-crema-dark/5">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center fade-in">
-            <!-- Text Content -->
-            <div>
-                <h2 class="text-sm font-semibold uppercase text-crema-medium tracking-widest mb-2">Our Philosophy</h2>
-                <h3 class="text-4xl sm:text-5xl font-serif font-semibold mb-6 leading-tight">
-                    More Than Just a Cup of Coffee.
-                </h3>
-                <p class="text-lg text-crema-dark/90 leading-relaxed mb-6">
-                    "Welcome to Crema Cafe Dunedin, where each cup is crafted with care to brighten your day. Whether you're stopping by for a quick pick-me-up or planning to savor the experience, we're here to make every visit special."
+            <!-- Dark overlay for contrast -->
+            <div class="absolute inset-0 bg-crema-dark opacity-60"></div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 p-6 max-w-4xl mx-auto bg-crema-light/90 rounded-2xl shadow-2xl backdrop-blur-sm border border-crema-medium/50">
+                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-serif font-light text-crema-dark tracking-tight leading-none mb-4">
+                    Crema Cafe
+                </h1>
+                <p class="text-xl sm:text-2xl text-crema-dark/80 italic font-light max-w-2xl mx-auto mt-4">
+                    Treat yourself to the perfect coffee experience in a cozy atmosphere.
                 </p>
-                <p class="text-lg text-crema-dark/90 leading-relaxed mb-6">
-                    "Our mission is simple: to inspire and connect our community, one cup at a time. More than just a coffee shop, we are a neighborhood gathering place where friends meet and ideas are born."
-                </p>
-                <p class="text-lg text-crema-dark/90 leading-relaxed">
-                    "Our beans are carefully selected from single-origin farms and roasted in small, precise batches to bring out their unique and complex flavors. We believe in quality over quantity, and our baristas are dedicated to crafting the perfect pour-over, espresso, or cold brew every time."
-                </p>
-            </div>
-            <!-- Image: Barista crafting latte art with espresso machine -->
-            <div class="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition duration-700 ease-out">
-                <img src="uploaded:espresso-art-crafting-stockcake.jpg-c77b8060-15b6-4487-bd51-471d0176b8c9" 
-                     alt="A barista preparing a beautiful latte with art, espresso pouring from the machine." 
-                     class="w-full h-full object-cover">
-            </div>
-        </div>
-    </section>
-    
-    <!-- New Section: Customer Reviews (Uses the new crema-light BG) -->
-    <section id="reviews" class="py-24 bg-crema-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-sm font-semibold uppercase text-crema-medium tracking-widest mb-4 fade-in">Community Love</h2>
-            <p class="text-center text-5xl font-serif font-semibold mb-12 leading-tight text-crema-dark fade-in">Rave Reviews</p>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <!-- Review 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in">
-                    <div class="text-2xl text-crema-medium mb-3">
-                        ★★★★★
-                    </div>
-                    <p class="italic text-crema-dark/90 mb-4 h-24 overflow-hidden">
-                        "Crema Café in Dunedin is honestly such a cute family owned spot. The owners are super friendly and you can tell they actually care about your experience. They kept checking in to make sure our coffees tasted exactly how we wanted, not too..."
-                    </p>
-                    <p class="text-sm font-semibold text-crema-dark">- Mejid Balla</p>
-                    <p class="text-xs text-crema-medium/70">Local Guide</p>
-                </div>
-
-                <!-- Review 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in delay-100">
-                    <div class="text-2xl text-crema-medium mb-3">
-                        ★★★★★
-                    </div>
-                    <p class="italic text-crema-dark/90 mb-4 h-24 overflow-hidden">
-                        "Fantastic coffee spot in Dunedin. Minutes from Honeymoon Island and Caladesi Island, as well as Palm Harbor. The quality and atmosphere are unmatched in the area."
-                    </p>
-                    <p class="text-sm font-semibold text-crema-dark">- Loren Miller</p>
-                    <p class="text-xs text-crema-medium/70">Local Guide</p>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in delay-200">
-                    <div class="text-2xl text-crema-medium mb-3">
-                        ★★★★★
-                    </div>
-                    <p class="italic text-crema-dark/90 mb-4 h-24 overflow-hidden">
-                        "Excellent new spot for an espresso, cold brew, or pastry. Conveniently located next to the Pinellas Trail! A perfect place to refuel after a bike ride or morning walk."
-                    </p>
-                    <p class="text-sm font-semibold text-crema-dark">- Spencer Lynch</p>
-                    <p class="text-xs text-crema-medium/70">Local Guide</p>
-                </div>
-
-                <!-- Review 4 -->
-                <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in delay-300">
-                    <div class="text-2xl text-crema-medium mb-3">
-                        ★★★★★
-                    </div>
-                    <p class="italic text-crema-dark/90 mb-4 h-24 overflow-hidden">
-                        "Such a cute spot, got an Irish Cream matcha and it was delicious! Such a cute place for original gifts as well—perfect local shopping experience."
-                    </p>
-                    <p class="text-sm font-semibold text-crema-dark">- G A</p>
-                    <p class="text-xs text-crema-medium/70">Customer</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Full Menu Section (Alternating BG: creama-dark/5) -->
-    <section id="menu" class="py-24 bg-crema-dark/5">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-sm font-semibold uppercase text-crema-medium tracking-widest mb-4 fade-in">Explore What We Offer</h2>
-            <p class="text-center text-5xl font-serif font-semibold mb-12 leading-tight text-crema-dark fade-in">Our Full Menu</p>
-
-            <!-- Menu Container (Stays white for contrast) -->
-            <div class="bg-white rounded-2xl shadow-2xl p-4 sm:p-8 border border-crema-medium/30">
-                
-                <!-- 1. Drinks Dropdown -->
-                <div class="menu-dropdown border-b border-crema-medium/50 mb-4 fade-in">
-                    <!-- Toggle Button (Initially open for better user experience) -->
-                    <button class="menu-toggle w-full flex justify-between items-center py-4 text-3xl font-serif font-medium text-crema-dark hover:text-crema-medium transition duration-300">
-                        <span>Drinks</span>
-                        <!-- Arrow icon for visual state -->
-                        <svg class="arrow-icon w-6 h-6 transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <!-- Content (Initially set to max-h-0 in style, but JS will set it on load to show content) -->
-                    <div class="menu-content overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
-                        <p class="text-sm font-semibold uppercase text-crema-medium/70 pb-2">Prices (Small / Medium / Large)</p>
-                        <div class="space-y-4 pb-6 divide-y divide-crema-dark/10">
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Espresso</p>
-                                <p class="text-xl font-medium text-crema-dark">2.25 / 3.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Latte</p>
-                                <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Americano</p>
-                                <p class="text-xl font-medium text-crema-dark">3.75 / 4.25 / 4.75</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Cappuccino</p>
-                                <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Mocha</p>
-                                <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Macchiato</p>
-                                <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Flat White</p>
-                                <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Cold Brew</p>
-                                <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Black Coffee</p>
-                                <p class="text-xl font-medium text-crema-dark">2.75 / 3.25 / 3.75</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Hot Tea</p>
-                                <p class="text-xl font-medium text-crema-dark">3.25 / 3.75 / 4.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Extra Shot</p>
-                                <p class="text-xl font-medium text-crema-dark">1.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Milk Substitute (Oat, Soy, Almond)</p>
-                                <p class="text-xl font-medium text-crema-dark">1.00</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 2. Specialties & Flavors Dropdown -->
-                <div class="menu-dropdown border-b border-crema-medium/50 mb-4 fade-in delay-100">
-                    <button class="menu-toggle w-full flex justify-between items-center py-4 text-3xl font-serif font-medium text-crema-dark hover:text-crema-medium transition duration-300">
-                        <span>Specialties & Flavors</span>
-                        <svg class="arrow-icon w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="menu-content overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
-                        <div class="space-y-4 pb-6 divide-y divide-crema-dark/10">
-                            
-                            <!-- Specialty Drinks -->
-                            <h4 class="text-lg font-semibold text-crema-medium pt-4">Specialty Drinks (Prices S / M / L)</h4>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Hot Cocoa</p>
-                                <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Chai</p>
-                                <p class="text-xl font-medium text-crema-dark">5.75 / 6.50 / 7.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Matcha</p>
-                                <p class="text-xl font-medium text-crema-dark">5.75 / 6.50 / 7.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Italian Soda</p>
-                                <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Refresher</p>
-                                <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Frappuccino</p>
-                                <p class="text-xl font-medium text-crema-dark">6.75</p>
-                            </div>
-                            <p class="text-sm italic text-crema-medium/70 pt-4">Ask to See More Special Drinks</p>
-                            
-                            <!-- Flavors -->
-                            <h4 class="text-lg font-semibold text-crema-medium pt-4 border-t border-crema-dark/10">Flavors</h4>
-                            <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-lg text-crema-dark">
-                                <p>Vanilla</p><p>Caramel</p>
-                                <p>Coconut</p><p>Peppermint</p>
-                                <p>Hazelnut</p><p>Irish Cream</p>
-                                <p>Lavender</p><p>Toasted Marshmallow</p>
-                                <p>Amaretto</p><p>Pumpkin Spice</p>
-                            </div>
-                            <p class="text-sm italic text-crema-medium/70 pt-4">Ask to See the Full List of Flavors</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Snacks Dropdown -->
-                <div class="menu-dropdown fade-in delay-200">
-                    <button class="menu-toggle w-full flex justify-between items-center py-4 text-3xl font-serif font-medium text-crema-dark hover:text-crema-medium transition duration-300">
-                        <span>Snacks</span>
-                        <svg class="arrow-icon w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="menu-content overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
-                        <div class="space-y-4 pb-6 divide-y divide-crema-dark/10">
-                            <!-- Snack Items -->
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Coffeecake</p>
-                                <p class="text-xl font-medium text-crema-dark">3.00</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Muffins</p>
-                                <p class="text-xl font-medium text-crema-dark">3.75</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Bars</p>
-                                <p class="text-xl font-medium text-crema-dark">4.50</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Cookies</p>
-                                <p class="text-xl font-medium text-crema-dark">4.25</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Pastries</p>
-                                <p class="text-xl font-medium text-crema-dark">3.75</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Bagel / with cream cheese</p>
-                                <p class="text-xl font-medium text-crema-dark">2.25 / 3.50</p>
-                            </div>
-                            <div class="pt-4 flex justify-between items-start">
-                                <p class="text-xl font-medium text-crema-dark">Cake Pop</p>
-                                <p class="text-xl font-medium text-crema-dark">TBD</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Order Online Button -->
-                <div class="mt-8 text-center pt-8 border-t border-crema-medium/50 fade-in delay-300">
-                    <!-- Placeholder link. Update href="[TOAST_LINK_HERE]" with your actual Toast link -->
-                    <a href="[TOAST_LINK_HERE]" 
-                       class="inline-block px-10 py-5 bg-crema-dark text-crema-light font-bold text-xl rounded-full shadow-2xl tracking-wider uppercase 
-                              hover:bg-crema-medium hover:shadow-crema-medium/50 transition duration-500 ease-in-out transform hover:scale-105 border-2 border-crema-dark"
-                       target="_blank" rel="noopener noreferrer">
-                        <span class="mr-2">☕</span> Order Online Now
-                    </a>
-                    <p class="mt-4 text-sm text-crema-dark/70 italic">Click above to start your order via Toast.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Hours & Contact Section (Uses the new crema-light BG) -->
-    <section id="contact" class="py-24 md:py-36 bg-crema-light text-crema-dark border-t border-crema-medium/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12 items-start">
-            
-            <!-- Location/Address -->
-            <div class="fade-in">
-                <h4 class="text-xl font-semibold mb-4 text-crema-medium uppercase tracking-wider">Our Location</h4>
-                <address class="text-lg leading-relaxed not-italic text-crema-dark/90">
-                    2058 Bayshore Blvd.<br>
-                    Dunedin, FL 34698
-                </address>
-                <a href="tel:7272390092" class="mt-4 inline-block text-crema-medium hover:text-crema-dark transition duration-300 text-lg">
-                    (727) 239-0092
+                <a href="#menu" class="mt-8 inline-block px-8 py-4 bg-crema-dark text-crema-light font-semibold text-lg rounded-full shadow-lg hover:bg-crema-medium hover:text-white transition duration-500 ease-in-out transform hover:scale-105">
+                    Explore Our Menu
                 </a>
             </div>
-            
-            <!-- Hours -->
-            <div class="fade-in delay-150">
-                <h4 class="text-xl font-semibold mb-4 text-crema-medium uppercase tracking-wider">Hours of Operation</h4>
-                <ul class="space-y-2 text-lg text-crema-dark">
-                    <li class="flex justify-between border-b border-crema-dark/20 pb-1"><span>Sunday:</span> <span>8:00 am - 3:30 pm</span></li>
-                    <li class="flex justify-between border-b border-crema-dark/20 pb-1"><span>Monday:</span> <span class="text-red-600 font-medium">Closed</span></li>
-                    <li class="flex justify-between border-b border-crema-dark/20 pb-1"><span>Tues - Fri:</span> <span>7:00 am - 3:30 pm</span></li>
-                    <li class="flex justify-between"><span>Saturday:</span> <span>7:30 am - 5:30 pm</span></li>
-                </ul>
-            </div>
-            
-            <!-- Social/Connect -->
-            <div class="fade-in delay-300">
-                <h4 class="text-xl font-semibold mb-4 text-crema-medium uppercase tracking-wider">Connect With Us</h4>
-                <p class="mb-4 text-lg text-crema-dark/90">Follow our journey and daily specials on social media!</p>
-                <div class="flex space-x-6">
-                    <!-- Instagram Link Placeholder -->
-                    <a href="#" class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark">
-                        <!-- Simple Social Icon (Using inline SVG for elegance) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
-                    </a>
-                    <!-- Facebook Link Placeholder -->
-                    <a href="#" class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-                    </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 md:py-36 bg-crema-dark/5">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center fade-in">
+                <!-- Text Content -->
+                <div>
+                    <h2 class="text-sm font-semibold uppercase text-crema-medium tracking-widest mb-2">Our Philosophy</h2>
+                    <h3 class="text-4xl sm:text-5xl font-serif font-semibold mb-6 leading-tight">
+                        More Than Just a Cup of Coffee.
+                    </h3>
+                    <p class="text-lg text-crema-dark/90 leading-relaxed mb-6">
+                        Welcome to Crema Cafe Dunedin, where each cup is crafted with care to brighten your day. Whether you're stopping by for a quick pick-me-up or planning to savor the experience, we're here to make every visit special.
+                    </p>
+                    <p class="text-lg text-crema-dark/90 leading-relaxed mb-6">
+                        Our mission is simple: to inspire and connect our community, one cup at a time. More than just a coffee shop, we are a neighborhood gathering place where friends meet and ideas are born.
+                    </p>
+                    <p class="text-lg text-crema-dark/90 leading-relaxed">
+                        Our beans are carefully selected from single-origin farms and roasted in small, precise batches to bring out their unique and complex flavors. We believe in quality over quantity, and our baristas are dedicated to crafting the perfect pour-over, espresso, or cold brew every time.
+                    </p>
+                </div>
+                <!-- Image -->
+                <div class="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition duration-700 ease-out">
+                    <!-- Replace src with your actual image file -->
+                    <img src="uploaded:espresso-art-crafting-stockcake.jpg-c77b8060-15b6-4487-bd51-471d0176b8c9"
+                         alt="Barista preparing a latte with art."
+                         class="w-full h-full object-cover">
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-24 bg-crema-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-center text-sm font-semibold uppercase text-crema-medium tracking-widest mb-4 fade-in">Community Love</h2>
+                <p class="text-center text-5xl font-serif font-semibold mb-12 leading-tight text-crema-dark fade-in">Rave Reviews</p>
 
-</main>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in">
+                        <div class="text-2xl text-crema-medium mb-3">★★★★★</div>
+                        <p class="italic text-crema-dark/90 mb-4 h-24 overflow-hidden">
+                            "Crema Café in Dunedin is honestly such a cute family owned spot. The owners are super friendly and you can tell they actually care about your experience..."
+                        </p>
+                        <p class="text-sm font-semibold text-crema-dark">- Mejid Balla</p>
+                        <p class="text-xs text-crema-medium/70">Local Guide</p>
+                    </div>
 
-<!-- Footer (Uses the new crema-light BG) -->
-<footer class="py-8 bg-crema-light/95 text-center text-crema-dark text-sm border-t border-crema-medium/50">
-    <p>&copy; 2025 Crema Cafe. All rights reserved. | Handcrafted in Dunedin, FL.</p>
-</footer>
+                    <!-- Review 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in delay-100">
+                        <div class="text-2xl text-crema-medium mb-3">★★★★★</div>
+                        <p class="italic text-crema-dark/90 mb-4 h-24 overflow-hidden">
+                            "Fantastic coffee spot in Dunedin. Minutes from Honeymoon Island and Caladesi Island. The quality and atmosphere are unmatched in the area."
+                        </p>
+                        <p class="text-sm font-semibold text-crema-dark">- Loren Miller</p>
+                        <p class="text-xs text-crema-medium/70">Local Guide</p>
+                    </div>
 
-<!-- JavaScript for Smooth Scrolling, Fade-in Animations, and Accordion -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // 1. Smooth Scrolling for Navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                    <!-- Review 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in delay-200">
+                        <div class="text-2xl text-crema-medium mb-3">★★★★★</div>
+                        <p class="italic text-crema-dark/90 mb-4 h-24 overflow-hidden">
+                            "Excellent new spot for an espresso, cold brew, or pastry. Conveniently located next to the Pinellas Trail!"
+                        </p>
+                        <p class="text-sm font-semibold text-crema-dark">- Spencer Lynch</p>
+                        <p class="text-xs text-crema-medium/70">Local Guide</p>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-crema-medium/30 transition duration-300 hover:shadow-xl fade-in delay-300">
+                        <div class="text-2xl text-crema-medium mb-3">★★★★★</div>
+                        <p class="italic text-crema-dark/90 mb-4 h-24 overflow-hidden">
+                            "Such a cute spot, got an Irish Cream matcha and it was delicious! Perfect local shopping experience."
+                        </p>
+                        <p class="text-sm font-semibold text-crema-dark">- G A</p>
+                        <p class="text-xs text-crema-medium/70">Customer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-24 bg-crema-dark/5">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-center text-sm font-semibold uppercase text-crema-medium tracking-widest mb-4 fade-in">Explore What We Offer</h2>
+                <p class="text-center text-5xl font-serif font-semibold mb-12 leading-tight text-crema-dark fade-in">Our Full Menu</p>
+
+                <div class="bg-white rounded-2xl shadow-2xl p-4 sm:p-8 border border-crema-medium/30">
+
+                    <!-- Drinks Dropdown -->
+                    <div class="menu-dropdown border-b border-crema-medium/50 mb-4 fade-in">
+                        <button class="menu-toggle w-full flex justify-between items-center py-4 text-3xl font-serif font-medium text-crema-dark hover:text-crema-medium transition duration-300">
+                            <span>Drinks</span>
+                            <svg class="arrow-icon w-6 h-6 transform transition-transform duration-300 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="menu-content overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <p class="text-sm font-semibold uppercase text-crema-medium/70 pb-2">Prices (Small / Medium / Large)</p>
+                            <div class="space-y-4 pb-6 divide-y divide-crema-dark/10">
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Espresso</p>
+                                    <p class="text-xl font-medium text-crema-dark">2.25 / 3.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Latte</p>
+                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Americano</p>
+                                    <p class="text-xl font-medium text-crema-dark">3.75 / 4.25 / 4.75</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Cappuccino</p>
+                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Mocha</p>
+                                    <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Macchiato</p>
+                                    <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Flat White</p>
+                                    <p class="text-xl font-medium text-crema-dark">5.25 / 6.00 / 6.75</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Cold Brew</p>
+                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Black Coffee</p>
+                                    <p class="text-xl font-medium text-crema-dark">2.75 / 3.25 / 3.75</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Hot Tea</p>
+                                    <p class="text-xl font-medium text-crema-dark">3.25 / 3.75 / 4.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Extra Shot</p>
+                                    <p class="text-xl font-medium text-crema-dark">1.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Milk Substitute (Oat, Soy, Almond)</p>
+                                    <p class="text-xl font-medium text-crema-dark">1.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Specialties & Flavors -->
+                    <div class="menu-dropdown border-b border-crema-medium/50 mb-4 fade-in delay-100">
+                        <button class="menu-toggle w-full flex justify-between items-center py-4 text-3xl font-serif font-medium text-crema-dark hover:text-crema-medium transition duration-300">
+                            <span>Specialties & Flavors</span>
+                            <svg class="arrow-icon w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="menu-content overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <div class="space-y-4 pb-6 divide-y divide-crema-dark/10">
+                                <h4 class="text-lg font-semibold text-crema-medium pt-4">Specialty Drinks (Prices S / M / L)</h4>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Hot Cocoa</p>
+                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Chai</p>
+                                    <p class="text-xl font-medium text-crema-dark">5.75 / 6.50 / 7.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Matcha</p>
+                                    <p class="text-xl font-medium text-crema-dark">5.75 / 6.50 / 7.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Italian Soda</p>
+                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Refresher</p>
+                                    <p class="text-xl font-medium text-crema-dark">4.75 / 5.50 / 6.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Frappuccino</p>
+                                    <p class="text-xl font-medium text-crema-dark">6.75</p>
+                                </div>
+                                <p class="text-sm italic text-crema-medium/70 pt-4">Ask to see more special drinks.</p>
+
+                                <h4 class="text-lg font-semibold text-crema-medium pt-4 border-t border-crema-dark/10">Flavors</h4>
+                                <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-lg text-crema-dark">
+                                    <p>Vanilla</p><p>Caramel</p>
+                                    <p>Coconut</p><p>Peppermint</p>
+                                    <p>Hazelnut</p><p>Irish Cream</p>
+                                    <p>Lavender</p><p>Toasted Marshmallow</p>
+                                    <p>Amaretto</p><p>Pumpkin Spice</p>
+                                </div>
+                                <p class="text-sm italic text-crema-medium/70 pt-4">Ask to see the full list of flavors.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Snacks -->
+                    <div class="menu-dropdown fade-in delay-200">
+                        <button class="menu-toggle w-full flex justify-between items-center py-4 text-3xl font-serif font-medium text-crema-dark hover:text-crema-medium transition duration-300">
+                            <span>Snacks</span>
+                            <svg class="arrow-icon w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="menu-content overflow-hidden max-h-0 transition-max-height duration-500 ease-in-out">
+                            <div class="space-y-4 pb-6 divide-y divide-crema-dark/10">
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Coffeecake</p>
+                                    <p class="text-xl font-medium text-crema-dark">3.00</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Muffins</p>
+                                    <p class="text-xl font-medium text-crema-dark">3.75</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Bars</p>
+                                    <p class="text-xl font-medium text-crema-dark">4.50</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Cookies</p>
+                                    <p class="text-xl font-medium text-crema-dark">4.25</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Pastries</p>
+                                    <p class="text-xl font-medium text-crema-dark">3.75</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Bagel / with cream cheese</p>
+                                    <p class="text-xl font-medium text-crema-dark">2.25 / 3.50</p>
+                                </div>
+                                <div class="pt-4 flex justify-between items-start">
+                                    <p class="text-xl font-medium text-crema-dark">Cake Pop</p>
+                                    <p class="text-xl font-medium text-crema-dark">TBD</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Order Online Button -->
+                    <div class="mt-8 text-center pt-8 border-t border-crema-medium/50 fade-in delay-300">
+                        <!-- Replace [TOAST_LINK_HERE] with real Toast order link -->
+                        <a href="[TOAST_LINK_HERE]"
+                           class="inline-block px-10 py-5 bg-crema-dark text-crema-light font-bold text-xl rounded-full shadow-2xl tracking-wider uppercase hover:bg-crema-medium hover:shadow-crema-medium/50 transition duration-500 ease-in-out transform hover:scale-105 border-2 border-crema-dark"
+                           target="_blank" rel="noopener noreferrer">
+                            <span class="mr-2">☕</span> Order Online Now
+                        </a>
+                        <p class="mt-4 text-sm text-crema-dark/70 italic">Click above to start your order via Toast.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Hours & Contact Section -->
+        <section id="contact" class="py-24 md:py-36 bg-crema-light text-crema-dark border-t border-crema-medium/50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-12 items-start">
+                <!-- Location -->
+                <div class="fade-in">
+                    <h4 class="text-xl font-semibold mb-4 text-crema-medium uppercase tracking-wider">Our Location</h4>
+                    <address class="text-lg leading-relaxed not-italic text-crema-dark/90">
+                        2058 Bayshore Blvd.<br>
+                        Dunedin, FL 34698
+                    </address>
+                    <a href="tel:7272390092" class="mt-4 inline-block text-crema-medium hover:text-crema-dark transition duration-300 text-lg">
+                        (727) 239-0092
+                    </a>
+                </div>
+
+                <!-- Hours -->
+                <div class="fade-in delay-150">
+                    <h4 class="text-xl font-semibold mb-4 text-crema-medium uppercase tracking-wider">Hours of Operation</h4>
+                    <ul class="space-y-2 text-lg text-crema-dark">
+                        <li class="flex justify-between border-b border-crema-dark/20 pb-1"><span>Sunday:</span> <span>8:00 am - 3:30 pm</span></li>
+                        <li class="flex justify-between border-b border-crema-dark/20 pb-1"><span>Monday:</span> <span class="text-red-600 font-medium">Closed</span></li>
+                        <li class="flex justify-between border-b border-crema-dark/20 pb-1"><span>Tues - Fri:</span> <span>7:00 am - 3:30 pm</span></li>
+                        <li class="flex justify-between"><span>Saturday:</span> <span>7:30 am - 5:30 pm</span></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div class="fade-in delay-300">
+                    <h4 class="text-xl font-semibold mb-4 text-crema-medium uppercase tracking-wider">Connect With Us</h4>
+                    <p class="mb-4 text-lg text-crema-dark/90">Follow our journey and daily specials on social media!</p>
+                    <div class="flex space-x-6">
+                        <!-- Instagram -->
+                        <a href="#" class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#" class="text-3xl hover:text-crema-medium transition duration-300 text-crema-dark" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-crema-light/95 text-center text-crema-dark text-sm border-t border-crema-medium/50">
+        <p>&copy; 2025 Crema Cafe. All rights reserved. | Handcrafted in Dunedin, FL.</p>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling, fade-in, and accordion -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth Scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const targetId = this.getAttribute('href');
+                    const targetEl = document.querySelector(targetId);
+                    if (!targetEl) return;
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
                 });
             });
-        });
 
-        // 2. Intersection Observer for Fade-in Effect
-        const faders = document.querySelectorAll('.fade-in');
+            // Fade-in on scroll
+            const faders = document.querySelectorAll('.fade-in');
+            const appearOptions = {
+                threshold: 0,
+                rootMargin: "0px 0px -100px 0px"
+            };
 
-        const appearOptions = {
-            threshold: 0,
-            rootMargin: "0px 0px -100px 0px" // Start fade-in 100px before reaching the bottom of the viewport
-        };
-
-        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
+            const appearOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
                     entry.target.classList.add('appear');
-                    appearOnScroll.unobserve(entry.target);
-                }
-            });
-        }, appearOptions);
-
-        faders.forEach(fader => {
-            appearOnScroll.observe(fader);
-        });
-
-
-        // 3. Accordion / Dropdown Logic for the Menu
-        const menuToggles = document.querySelectorAll('.menu-toggle');
-        const drinksContent = document.querySelector('.menu-dropdown:nth-child(1) .menu-content');
-
-        // Function to handle the toggle action
-        function toggleAccordion(button) {
-            const content = button.nextElementSibling;
-            const arrow = button.querySelector('.arrow-icon');
-            
-            // Check if the content is currently collapsed (max-height is null/empty)
-            if (content.style.maxHeight) {
-                // Collapse the content
-                content.style.maxHeight = null;
-                arrow.classList.remove('rotate-180');
-            } else {
-                // Collapse all other open dropdowns (Optional: keep only one open at a time)
-                document.querySelectorAll('.menu-content').forEach(otherContent => {
-                    if (otherContent !== content && otherContent.style.maxHeight) {
-                        otherContent.style.maxHeight = null;
-                        otherContent.previousElementSibling.querySelector('.arrow-icon').classList.remove('rotate-180');
-                    }
+                    observer.unobserve(entry.target);
                 });
-                
-                // Expand the current content
-                // Set max-height to the scroll height for smooth transition
-                content.style.maxHeight = content.scrollHeight + "px";
-                arrow.classList.add('rotate-180');
-            }
-        }
+            }, appearOptions);
 
-        // Event listener for all toggle buttons
-        menuToggles.forEach(button => {
-            button.addEventListener('click', () => {
-                toggleAccordion(button);
+            faders.forEach(fader => {
+                appearOnScroll.observe(fader);
             });
-        });
 
-        // Make the 'Drinks' section open by default on load
-        if (drinksContent) {
-            // Wait briefly for the DOM to settle and calculate scrollHeight correctly
-            setTimeout(() => {
-                drinksContent.style.maxHeight = drinksContent.scrollHeight + "px";
-            }, 100);
-        }
-    });
-</script>
+            // Accordion / Dropdown Menu
+            const menuToggles = document.querySelectorAll('.menu-toggle');
+            const drinksContent = document.querySelector('.menu-dropdown:nth-child(1) .menu-content');
+
+            function toggleAccordion(button) {
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector('.arrow-icon');
+
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    arrow.classList.remove('rotate-180');
+                } else {
+                    document.querySelectorAll('.menu-content').forEach(other => {
+                        if (other !== content && other.style.maxHeight) {
+                            other.style.maxHeight = null;
+                            const otherArrow = other.previousElementSibling.querySelector('.arrow-icon');
+                            if (otherArrow) otherArrow.classList.remove('rotate-180');
+                        }
+                    });
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    arrow.classList.add('rotate-180');
+                }
+            }
+
+            menuToggles.forEach(button => {
+                button.addEventListener('click', () => toggleAccordion(button));
+            });
+
+            // Open Drinks by default
+            if (drinksContent) {
+                setTimeout(() => {
+                    drinksContent.style.maxHeight = drinksContent.scrollHeight + "px";
+                }, 100);
+            }
+        });
+    </script>
 
 </body>
 </html>
